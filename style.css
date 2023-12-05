@@ -43,6 +43,15 @@ input {
 input:focus {
   border: 2px solid var(--Purple);
 }
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.input-flex {
+  display: flex;
+}
 
 small {
   color: red;
