@@ -51,6 +51,8 @@ input:focus {
 }
 .input-flex {
   display: flex;
+  border-bottom: 2px solid var(--Off-white);
+  margin-bottom: 20px;
 }
 
 small {
