@@ -65,9 +65,12 @@ small {
   right: 30px;
   top: 60px;
 }
-
+.submit-btn:hover {
+  background-color: black;
+  cursor: pointer;
+}
 .output span {
-    font-size: 2.75rem;
-    color: var(--Purple);
-    font-style: italic;
+  font-size: 2.75rem;
+  color: var(--Purple);
+  font-style: italic;
 }
