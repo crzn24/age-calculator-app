@@ -66,6 +66,8 @@ small {
   top: 60px;
 }
 
-.output {
-
+.output span {
+    font-size: 2.75rem;
+    color: var(--Purple);
+    font-style: italic;
 }
