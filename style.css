@@ -61,8 +61,11 @@ small {
   align-items: center;
   border: none;
   border-radius: 50%;
+  position: absolute;
+  right: 30px;
+  top: 60px;
 }
 
-output {
-    
+.output {
+
 }
