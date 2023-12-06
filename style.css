@@ -85,3 +85,21 @@ small {
   color: var(--Purple);
   font-style: italic;
 }
+
+@media(max-width:768px){
+    input{
+        width: 80%;
+    }
+    .output span {
+        font-size: 1.75rem;
+    }
+    .submit-btn{
+        width: 40px;
+        height: 40px;
+        right: 40%;
+        top: 90px;
+    }
+    .submit-btn img{
+        transform: scale(0.5);
+    }
+}
