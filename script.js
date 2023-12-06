@@ -96,7 +96,7 @@ function CalculateDate() {
     let ageDate = new Date(ageDifference);
     let ageYears = ageDate.getUTCFullYear() - 1970;
     let ageMonth = ageDate.getUTCMonth();
-    let ageDay = ageDate.getUTCDay - 1;
+    let ageDay = ageDate.getUTCDay();
     outputDay.textContent = ageDay;
     outputMonth.textContent = ageMonth;
     outputYear.textContent = ageYears;
