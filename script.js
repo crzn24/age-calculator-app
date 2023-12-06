@@ -25,7 +25,7 @@ submitbtn.addEventListener("click", CalculateDate);
 
 //listener for day input
 inputDay.addEventListener("input", (e) => {
-//   console.log("day!");
+  //   console.log("day!");
   if (+inputDay.value > 31) {
     errorDay.textContent = "Must be a valid day";
     isValid = false;
@@ -46,7 +46,7 @@ inputDay.addEventListener("input", (e) => {
 
 //listener for month input
 inputMonth.addEventListener("input", (e) => {
-//   console.log("month!");
+  //   console.log("month!");
   if (+inputMonth.value > 12) {
     errorMonth.textContent = "Must be a valid month";
     isValid = false;
@@ -67,7 +67,7 @@ inputMonth.addEventListener("input", (e) => {
 
 //listener for year input
 inputYear.addEventListener("input", (e) => {
-//   console.log("year!");
+  //   console.log("year!");
   if (+inputYear.value > 2023) {
     errorYear.textContent = "Must be a valid year";
     isValid = false;
@@ -79,7 +79,6 @@ inputYear.addEventListener("input", (e) => {
   if (+inputYear.value === 0) {
     isValid = false;
     errorYear.textContent = "This field is required";
-    isValid = false;
     return;
   } else {
     errorYear.textContent = "";
@@ -96,11 +95,42 @@ function CalculateDate() {
     let ageDate = new Date(ageDifference);
     let ageYears = ageDate.getUTCFullYear() - 1970;
     let ageMonth = ageDate.getUTCMonth();
-    let ageDay = ageDate.getUTCDay();
+    let ageDay = ageDate.getUTCDate() - 1;
+    console.log(ageDay);
     outputDay.textContent = ageDay;
     outputMonth.textContent = ageMonth;
     outputYear.textContent = ageYears;
   } else {
-    alert("error");
+    alert("Please enter a date.");
   }
 }
+
+// function age() {
+//   // vars
+//   var d1 = document.getElementById("date").value;
+//   var m1 = document.getElementById("month").value;
+//   var y1 = document.getElementById("year").value;
+
+//   //   stores current date
+//   var date = new Date();
+//   var d2 = date.getDate();
+//   var m2 = 1 + date.getMonth();
+//   var y2 = date.getFullYear();
+//   var month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+//   if (d1 > d2) {
+//     d2 = d2 + month[m2 - 1];
+//     m2 = m2 - 1;
+//   }
+//   if (m1 > m2) {
+//     m2 = m2 + 12;
+//     y2 = y2 - 1;
+//   }
+//   //   Subtract user DOB from current time and store as constants d, m, y
+//   var d = d2 - d1;
+//   var m = m2 - m1;
+//   var y = y2 - y1;
+
+//   document.getElementById("age").innerHTML =
+//     "Your Age is " + y + " Years " + m + " Months " + d + " Days";
+// }
