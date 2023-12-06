@@ -19,13 +19,13 @@ const errorDay = document.querySelector(".error-day");
 // submit button event listener
 submitbtn.addEventListener("click", CalculateDate);
 
-function CalculateDate() {
-  console.log("clicked!");
-}
+// function CalculateDate() {
+//   console.log("clicked!");
+// }
 
 //listener for day input
 inputDay.addEventListener("input", (e) => {
-  console.log("day!");
+//   console.log("day!");
   if (+inputDay.value > 31) {
     errorDay.textContent = "Must be a valid day";
     isValid = false;
@@ -46,7 +46,7 @@ inputDay.addEventListener("input", (e) => {
 
 //listener for month input
 inputMonth.addEventListener("input", (e) => {
-  console.log("month!");
+//   console.log("month!");
   if (+inputMonth.value > 12) {
     errorMonth.textContent = "Must be a valid month";
     isValid = false;
@@ -67,7 +67,7 @@ inputMonth.addEventListener("input", (e) => {
 
 //listener for year input
 inputYear.addEventListener("input", (e) => {
-  console.log("year!");
+//   console.log("year!");
   if (+inputYear.value > 2023) {
     errorYear.textContent = "Must be a valid year";
     isValid = false;
@@ -87,20 +87,20 @@ inputYear.addEventListener("input", (e) => {
 });
 
 // submit button function
-// function CalculateDate() {
-//   if (isValid) {
-//     let birthday = `${inputMonth.value}/${inputDay.value}/${inputYear.value}`;
-//     console.log(birthday);
-//     let birthdayObject = new Date(birthday);
-//     let ageDifference = Date.now() - birthdayObject; //this is in milliseconds
-//     let ageDate = new Date(ageDifference);
-//     let ageYears = ageDate.getUTCFullYear() - 1970;
-//     let ageMonth = ageDate.getUTCMonth;
-//     let ageDay = ageDate.getUTCDay - 1;
-//     outputDay.textContent = ageDay;
-//     outputMonth.textContent = ageMonth;
-//     outputYear.textContent = ageYears;
-//   } else {
-//     alert("error");
-//   }
-// }
+function CalculateDate() {
+  if (isValid) {
+    let birthday = `${inputMonth.value}/${inputDay.value}/${inputYear.value}`;
+    console.log(birthday);
+    let birthdayObject = new Date(birthday);
+    let ageDifference = Date.now() - birthdayObject; //this is in milliseconds
+    let ageDate = new Date(ageDifference);
+    let ageYears = ageDate.getUTCFullYear() - 1970;
+    let ageMonth = ageDate.getUTCMonth();
+    let ageDay = ageDate.getUTCDay - 1;
+    outputDay.textContent = ageDay;
+    outputMonth.textContent = ageMonth;
+    outputYear.textContent = ageYears;
+  } else {
+    alert("error");
+  }
+}
